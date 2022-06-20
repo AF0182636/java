@@ -1,0 +1,191 @@
+//Program for ATM Machine:
+import java.util.Scanner;
+import java.util.*;
+import java.awt.*;
+public class ATMl {
+
+
+    public static void main(String[]arg)
+    {
+     // Toolkit.getDefaultToolkit().beep();
+      Scanner sc=new Scanner(System.in);
+      System.out.println("*PROGRAM FOR ATM MACHINE");
+
+      System.out.println("\n>>ELCOME IN SBI ATM");
+     
+      System.out.print("\n>>PLEASE INSERT YOUR DEBIT CARD:");
+      try{
+       Thread.sleep(5*60*10);
+      System.out.println("\n>>Pease press-1 for verification:");
+      }catch (Exception e){}
+      int a=sc.nextInt();
+     
+      if(a==1)
+      {
+        System.out.println("\n>>Verification succesfull");
+      }
+      else if(a!=1)
+      {
+          System.out.println("\n>>You enter wrong press");
+      }
+        
+      System.out.println("\n>>ENTER YOUR PIN:");
+      int pass=sc.nextInt();
+      System.out.println(">>SELECT ACCOUNT TYPE \n1.>>Current\n2.>>saving");
+                    int typ=sc.nextInt();
+                    switch(typ)
+                    {
+                       case 1:  
+                              System.out.println(">>YOU SELECT CURRENT ACCUONT");
+                              break; 
+                              
+                       
+                       case 2:
+                              System.out.println(">>YOU SELECT SAVING ACCUONT");
+                              break; 
+                       default :
+                            {      Toolkit.getDefaultToolkit().beep();
+                                   try {
+                                Thread.sleep(4);}
+                                
+                                catch(InterruptedException e){}
+                                   
+                                   System.out.println(">>WRONGE CHOICE");
+                                  // }catch(InterruptedException e){}
+                            }   
+                            System.exit(typ);      
+                                       
+                         break;   
+                    }  
+            
+         try{
+         Thread.sleep(5*60*10);
+         System.out.println("\t\t\t\t>>SELECT THE TRANCSACTION");
+         System.out.println("\n1.\t\t>>CASH WITHDRAWAL");
+         System.out.println("\n2.\t\t>>DEPOSITE");
+         System.out.println("\n3.\t\t>>BALANCE INQUIRY");
+         System.out.println("\n4.\t\t>>EXIT");
+         }catch (Exception e){}
+
+         
+         System.out.println(">>ENTER THE CHOICE:");
+         int ch=sc.nextInt();
+
+         switch(ch)
+         {
+             case 1:
+                    int balance=210000;
+                    System.out.println(">>YOU SELECT CASH WITHDRAWAL:");
+                    System.out.println(">>ENTER THE AMOUNT:");
+                    int withdraw=sc.nextInt();
+                    System.out.println("YOU ENTERED AMOUNT="+withdraw);
+                    System.out.println("\n1.CONFIRM\n2.EXIT");
+                    System.out.println(">>ENTER YOUR CHOICE:");
+                    int A=sc.nextInt();
+                    switch(A)
+                    {
+
+                        case 1:
+                        
+                               System.out.println(">>PLEASE WAITE.....YOUR TRANCSACTION BEING PROCEED");
+                               try{
+                                   Thread.sleep(5*60*10);
+                               if(balance>=withdraw)
+                               {
+                                  balance=balance-withdraw;
+                                 System.out.println(">>YOUR TRANCSACTION SUCCESFULL");
+                               try{
+                                   Thread.sleep(5*60*10); 
+                                 System.out.println("\n\n>>PLEASE COLLECT YOUR MONY");
+                               }catch (Exception e){}
+                                 System.out.println("\n\n>>PLEASE...REMOVE YOUR CARD");
+                               }
+                               else 
+                               {
+                                   System.out.println(">>YOUR TRANCSACTION IS FAILED DUE TO INSUFFIICENT BALANCE:");
+                                   System.out.println(">>PLEASE...REMOVE YOUR CARD");
+                               }
+                                }catch (Exception e){}
+                               
+                    
+                        break;
+                        case 2:
+                               System.out.println(">>THANKS FOR VISITING");
+                               System.out.println(">>PLEASE...REMOVE YOU CARD");
+                        break;       
+                    
+                    }
+                    
+                 
+             break;
+             
+             case 2:
+                    System.out.println(">>YOU SELECTED CASH DEPOSITE");
+
+                    System.out.println(">>DEPOSITE PER TRANSACTION LIMIT:20000");
+
+                    System.out.println(">>INSERT YOUR CASH...");
+                  
+                    System.out.println("PRESS-9 TO ENTER");
+                    int p=sc.nextInt();
+                    if( p==9)
+                    {
+                     
+                        System.out.println("YOURE TRANSACTION BEING PROCESSED,\nPLEASE WAITE....");
+                     
+                     try{
+                            Thread.sleep(5*60*10);
+                        System.out.println(">>TRANSACTION COMPLETED");
+                        System.out.println(">>THANKS FOR VISITING");
+                     }catch (Exception e){}
+
+                    }
+       
+             break;
+             case 3:
+                    System.out.println("YOU SELECT BALANCE INQUIRY:");
+                    try{
+                     Thread.sleep(5*60*10);
+                    System.out.println(">>ENTER YOUR PIN:");
+                     }catch (Exception e){}
+                    int pas=sc.nextInt();
+                    try{
+                     Thread.sleep(5*60*10);
+                    System.out.println(">>YOUR AVAILABLE BALANCE IS xxxx");
+                    }catch (Exception e){}
+                    System.out.println(">>THANK YOU FOR VISITING");
+             break;       
+                   
+
+             case 4:
+                    System.out.println("\n1.CONFIRM\n2.EXIT");
+                    try{
+                    Thread.sleep(5*60*10);
+                    System.out.println(">>ENTER YOUR CHOICE:");
+                    }catch (Exception e){}
+                    int ak=sc.nextInt();
+             switch(ak)
+             {
+
+                 case 1:
+                        System.out.println(">>PLEASE WAITE.....YOUR TRANCSACTION BEING PROCEED");
+                       
+             
+                 break;
+                 case 2:
+                         Toolkit.getDefaultToolkit().beep();
+                         try {
+                         Thread.sleep(4000);}
+              
+                        catch(InterruptedException e){}
+                        System.out.println(">>THANKS FOR VISITING");
+                        System.out.println(">>REMOVE YOU CARD");
+                 break;       
+             
+             }
+             break;        
+
+
+    }                      
+}
+}
