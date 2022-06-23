@@ -1,0 +1,95 @@
+class Employee{
+    String emp_Name;
+    String emp_Id;
+    String emp_Add;
+    long emp_Phone;
+    double b_Salary=5000;
+    double specialAllowance=220.32;
+    double hra=1000.50;
+    
+
+    Employee(String name,String Id,String Add,long Phone){
+        super();
+        this.emp_Name=name;
+    this. emp_Id=Id;
+    this. emp_Add=Add;
+    this.emp_Phone=Phone;
+    
+    System.out.println(this.emp_Name);
+    System.out.println(this.emp_Id);
+    System.out.println(this.emp_Add);
+    System.out.println(this.emp_Phone);
+    
+
+    
+       }
+    
+        public void calculateSalary(){
+            
+            double  salary;
+            double specialAllowance=220.32;
+            salary= b_Salary+(b_Salary*specialAllowance/100)+(b_Salary*hra/100);
+            System.out.println("employee salary is:"+salary);
+            }
+
+
+
+    
+
+}
+class Manager extends Employee{
+    double msalary;
+    double b_salary=8000;
+    double specialAllowance=500.32;
+
+    void msalary(){ 
+    msalary= b_Salary+(b_Salary*specialAllowance/100)+(b_Salary*hra/100);
+    System.out.println(" manager salary is:"+msalary);
+    }
+
+
+    Manager(String name, String Id, String Add, long Phone) {
+        super(name, Id, Add, Phone);
+        
+      
+    
+    }
+
+}
+
+class Trainee extends Manager{
+
+    double tsalary;    
+    double b_salary=3000;
+    double specialAllowance=200.32;
+
+    void tsalary(){ 
+    tsalary= b_Salary+(b_Salary*specialAllowance/100)+(b_Salary*hra/100);
+    System.out.println(" trainee salary is:"+tsalary);
+    }
+
+
+    Trainee(String name, String Id, String Add, long Phone) {
+        super(name, Id, Add, Phone);
+        
+    }
+    
+}
+class Ineheratance{
+    public static void main(String[]arg){
+        Employee e1=new Employee("sach","acbh","pandharpur",9551495);
+        
+        Manager m1=new Manager("priya","ABC-PRIYA","KOLHAPUR",9456455);
+
+        Trainee t1=new Trainee("jay","XYZ-JAY","MUMBAI",96955659);
+
+        e1.calculateSalary();
+        m1.msalary();   
+        t1.tsalary();
+    }
+
+    
+
+}
+
+    
