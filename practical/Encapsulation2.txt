@@ -1,0 +1,67 @@
+import java.util.Scanner;
+class Student{
+    private String sName;
+    private int id;
+    private String sEmail;
+    private long phoneNo;
+
+    public String getsName(){
+        return sName;
+    }
+    public void setsName(String sName){
+        this.sName=sName;
+    }
+
+    public int getid(){
+        return id;
+    }
+    public void setid(int id){
+        this.id=id;
+    }
+
+    public String getsEmail(){
+        return sEmail;
+    }
+    public void setsEmail(String sEmail){
+        this.sEmail=sEmail;
+    }
+
+    public long getphoneNo(){
+        return phoneNo;
+    }
+    public void setphoneNo(long phoneNo){
+        this.phoneNo=phoneNo;
+    }
+}
+class Encapsulation{
+    public static void main(String arg[]){
+
+        Student s1=new Student();
+
+        Scanner sc=new Scanner(System.in);
+        
+        System.out.println("Enter the Student name:");
+        String n=sc.nextLine();
+        s1.setsName(n);
+
+        System.out.println("Enter the Student Id:");
+        int i=sc.nextInt();
+        s1.setid(i);
+
+        System.out.println("Enter the Student Email:");
+        String e=sc.nextLine();
+        s1.setsEmail(e);
+        e=sc.nextLine();
+
+        System.out.println("Enter the student phone number:");
+        double p=sc.nextLong();
+        s1.setphoneNo((long) p);
+
+        System.out.println("The name of student is:"+s1.getsName());
+        System.out.println("Student Id:"+s1.getid());
+        System.out.println("Student Email:"+s1.getsEmail());
+        System.out.println("Student phone number:"+s1.getphoneNo());
+    }
+
+    
+}

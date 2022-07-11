@@ -1,0 +1,52 @@
+class Student{
+    private String sName;
+    private int id;
+    private String sEmail;
+    private double phoneNo;
+
+    public String getsName(){
+        return sName;
+    }
+    public void setsName(String sName){
+        this.sName=sName;
+    }
+
+    public int getid(){
+        return id;
+    }
+    public void setid(int id){
+        this.id=id;
+    }
+
+    public String getsEmail(){
+        return sEmail;
+    }
+    public void setsEmail(String sEmail){
+        this.sEmail=sEmail;
+    }
+
+    public double getphoneNo(){
+        return phoneNo;
+    }
+    public void setphoneNo(double phoneNo){
+        this.phoneNo=phoneNo;
+    }
+}
+class Encapsulation{
+    public static void main(String arg[]){
+        Student s1=new Student();
+        s1.setsName("sachin");
+        s1.setid(123);
+        s1.setsEmail("sj@123");
+        s1.setphoneNo(8566264);
+
+        
+
+        System.out.println("The name of student is:"+s1.getsName());
+        System.out.println("Student Id:"+s1.getid());
+        System.out.println("Student Email:"+s1.getsEmail());
+        System.out.println("Student phone number:"+s1.getphoneNo());
+    }
+
+    
+}
