@@ -1,0 +1,71 @@
+import java.util.Scanner;
+
+class Customer1{
+    private String cName;
+    private long accNo;
+    private int ifsc;
+    private long mobileNo;
+
+    public String getcName()
+    {
+        return cName;
+    }
+    public void setcName(String Customer_Name)
+    {
+        this.cName=Customer_Name;
+    }
+    public long getaccNo()
+    {
+        return accNo;
+    }
+    public void setaccNo(long accountNo)
+    {
+        this.accNo=accountNo;
+    }
+    public int getifsc()
+    {
+        return ifsc;
+    }
+    public void setifsc(int ifsc)
+    {
+        this.ifsc=ifsc;
+    }
+    public double getmobileNo()
+    {
+        return mobileNo;
+    }
+    public void setmobileNo(long mobileNo)
+    {
+        this.mobileNo=mobileNo;
+    }
+
+}
+class Banksbi{
+    public static void main(String arg[]){
+        Customer1 c1=new Customer1();
+
+        Scanner sc=new Scanner(System.in);
+
+        System.out.println("Enter the Customer name:");
+        String c=sc.nextLine();
+        c1.setcName(c);
+
+        System.out.println("Enter the Account number:");
+        long ac=sc.nextLong();
+        c1.setaccNo(ac);
+
+        System.out.println("Enter the IFSC code:");
+        int ic=sc.nextInt();
+        c1.setifsc(ic);
+        
+
+        System.out.println("Enter the Mobile number:");
+        long mn=sc.nextLong();
+        c1.setmobileNo(mn);
+
+        System.out.println("Customer name:"+c1.getcName());
+        System.out.println("Account numer:"+c1.getaccNo());
+        System.out.println("IFSC code:"+c1.getifsc());
+        System.out.println("Mobile number:"+c1.getmobileNo());
+    }
+}
