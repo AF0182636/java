@@ -1,0 +1,26 @@
+public class New{
+      public static void main(String srg[])
+        {
+        String ar[]={"abc","def","ghi","jkl","mno"};  //String array declaration
+
+        for(String a:ar)                              //for each loop
+        {
+          System.out.println("The array elements are:"+a);
+        }
+
+
+        int arr[]={1,2,3,5,5,455,12};                  //int array dec and ini.....
+        for(int i:arr)                                //for each loop
+        {
+            System.out.println("the array element is="+i);
+        }
+
+        
+        char ch[]={'a','e','i','o','u'};              //character array declaration and inolisation
+
+        for(char c:ch)
+        {
+          System.out.println("The character array is:"+c);
+        }
+}
+}
